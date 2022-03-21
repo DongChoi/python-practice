@@ -1,3 +1,6 @@
+from audioop import add
+
+
 def list_manipulation(lst, command, location, value=None):
     """Mutate lst to add/remove from beginning or end.
 
@@ -40,3 +43,27 @@ def list_manipulation(lst, command, location, value=None):
         >>> list_manipulation(lst, 'add', 'dunno') is None
         True
     """
+
+    if (location != "beginning" and location != "end" or command != "add" and command != "remove"):
+        return None
+
+    if command == "add":
+
+        if location == "beginning":
+            lst.insert(0, value)
+            return lst
+
+        elif location == "end":
+            lst.insert(len(lst), value)
+            return lst
+
+    else:
+
+        if location == "beginning":
+            return lst.pop(0)
+
+        elif location == "end":
+            return lst.pop()
+
+
+
