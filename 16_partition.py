@@ -13,7 +13,7 @@ def partition(lst, fn):
         >>> def is_string(el):
         ...     return isinstance(el, str)
         
-        >>> partition([1, 2, 3, 4], is_even)
+        >>> partition(1, 2, 3, 4], is_even)
         [[2, 4], [1, 3]]
         
         >>> partition(["hi", None, 6, "bye"], is_string)
@@ -23,6 +23,7 @@ def partition(lst, fn):
     failed = []
     result = []
 
+    #ASK ABOUT THIS PART ABOUT THE NESTED ARRAYS
     [passed.append(item) if fn(item) else failed.append(item) for item in lst]
     
     result.append(passed)

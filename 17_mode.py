@@ -11,3 +11,8 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    frequency_counter = {num:nums.count(num) for num in nums}
+
+    #ask about WHAT IS HAPPENONG
+    return max(frequency_counter, key=frequency_counter.get)
