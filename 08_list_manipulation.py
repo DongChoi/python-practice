@@ -1,6 +1,3 @@
-from audioop import add
-
-
 def list_manipulation(lst, command, location, value=None):
     """Mutate lst to add/remove from beginning or end.
 

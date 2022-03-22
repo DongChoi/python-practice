@@ -10,10 +10,15 @@ def single_letter_count(word, letter):
         >>> single_letter_count("Hello World", 'l')
         3
     """
-    count = 0
 
-    for ltr in word.upper():
+    """ for ltr in word.upper():
         if ltr == letter.upper():
             count+=1
             
-    return count
+    return count"""
+
+    letters = [ltr for ltr in word if ltr.upper() == letter.upper()]
+    return len(letters)
+
+    """count function for strings "word".lower().count(letter.lower()) //checks how many times the letter repeats
+    """

@@ -9,15 +9,16 @@ def multiple_letter_count(phrase):
     """
 
     # return {letter:  for letter in phrase}
-    counter = {}
 
-    for letter in phrase:
+    """    for letter in phrase:
         if letter not in counter:
             counter[letter] = 1
         else:
             counter[letter] += 1
 
-    return counter
+    return counter """
+
+    {letter:phrase.count(letter) for letter in phrase}
 
 
 
