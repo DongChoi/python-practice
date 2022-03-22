@@ -8,3 +8,6 @@ def capitalize(phrase):
         'Only first word'
     """
 
+    first_letter = phrase[0].upper()
+
+    return first_letter + phrase[1:]
